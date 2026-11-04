@@ -17,6 +17,7 @@ if (burger && sheet) {
     sheet.classList.toggle('open', open);
     burger.classList.toggle('open', open);
     burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'إغلاق القائمة' : 'فتح القائمة');
     document.body.style.overflow = open ? 'hidden' : '';
   };
   burger.addEventListener('click', () => toggle());
