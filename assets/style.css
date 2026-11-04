@@ -80,7 +80,7 @@ button,input{font:inherit;color:inherit}
 img{max-width:100%;display:block}
 ::selection{background:rgba(61,125,255,.24);color:var(--ink)}
 :focus-visible{outline:2px solid var(--blue-strong);outline-offset:3px;border-radius:6px}
-h1,h2,h3,h4{margin:0;font-weight:600;line-height:1.28}
+h1,h2,h3,h4{margin:0;font-weight:600;line-height:1.5}   /* Arabic diacritics need room when headings wrap */
 p{margin:0}
 .mono{font-family:'Space Grotesk',ui-monospace,monospace}
 
@@ -209,10 +209,11 @@ html.leaving{opacity:0;transition:opacity .32s var(--e2)}
 .hero .wrap{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(32px,5vw,72px);align-items:center}
 .hero-copy{position:relative;z-index:3;max-width:660px}
 .hero h1{
-  font-size:clamp(42px,6.6vw,92px);font-weight:600;line-height:1.14;letter-spacing:-.02em;
+  font-size:clamp(42px,6.6vw,92px);font-weight:600;line-height:1.44;letter-spacing:-.02em;
   margin:26px 0 26px;
 }
 .hero h1 .line{display:block}
+.hero h1 .line + .line{margin-top:3px}   /* small separation so the two lines never touch */
 .hero h1 .line i{display:block;font-style:normal;animation:lineUp 1.05s var(--e) both;animation-delay:var(--d,0s)}
 @keyframes lineUp{from{transform:translateY(.55em);opacity:0}to{transform:none;opacity:1}}
 .hero h1 .accent{color:var(--blue-strong)}
